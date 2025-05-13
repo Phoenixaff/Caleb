@@ -1,70 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Caleb Carter 💎 | Casino Hub</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      color: #fff;
-      text-align: center;
-      padding: 40px 20px;
-      background: url('https://images.unsplash.com/photo-1612817159948-56f5b916f7f2?auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
-      background-size: cover;
-    }
-    .overlay {
-      background-color: rgba(0, 0, 0, 0.75);
-      padding: 40px 20px;
-      border-radius: 20px;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .logo {
-      font-size: 2.8em;
-      font-weight: bold;
-      margin-bottom: 15px;
-      text-shadow: 0 0 15px #00ffff;
-    }
-    .tagline {
-      font-size: 1.3em;
-      color: #ccc;
-      margin-bottom: 40px;
-      text-shadow: 0 0 8px #ff00ff;
-    }
-    .button {
-      background-color: #00ffff;
-      color: #000;
-      padding: 14px 28px;
-      font-size: 1em;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 20px;
-      font-weight: bold;
-      box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
-    }
-    .section {
-      margin-bottom: 40px;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    .footer {
-      font-size: 0.9em;
-      color: #aaa;
-      margin-top: 60px;
-    }
-    @media (max-width: 600px) {
-      .logo {
-        font-size: 2em;
-      }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caleb Carter - HackBot</title>
 
 <!-- Meta Pixel Code -->
 <script>
@@ -76,36 +16,139 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '604769095341248');
+fbq('init', '1110065217313352');
 fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=604769095341248&ev=PageView&noscript=1"
+src="https://www.facebook.com/tr?id=1110065217313352&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
 
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: black;
+      color: #00ff00;
+      font-family: monospace;
+      overflow: hidden;
+    }
+
+    .matrix {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: black;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    canvas {
+      display: block;
+    }
+
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      padding: 40px;
+      background: rgba(0, 0, 0, 0.6);
+      border: 2px solid #00ff00;
+      border-radius: 10px;
+      width: 80%;
+      box-shadow: 0 0 20px #00ff00;
+    }
+
+    .content h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px #00ff00;
+    }
+
+    .content p {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+      text-shadow: 0 0 10px #00ff00;
+    }
+
+    .btn {
+      background-color: #00ff00;
+      border: none;
+      color: black;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      text-decoration: none;
+      border-radius: 5px;
+      box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+    }
+  </style>
 </head>
 <body>
-  <div class="overlay">
-    <div class="logo">Caleb Carter 💎</div>
-    <div class="tagline">Programmer. Hacker. Your personal guide to the online casino world.</div>
-    <div class="section">
-      <h2>🎰 What is this?</h2>
-      <p>Casino Hub is your gateway to the best Telegram casino bots, guides, and secret systems that actually work.</p>
-    </div>
-    <div class="section">
-      <h2>💸 What you'll get</h2>
-      <ul>
-        <li>🃏 Curated casino bots and gaming strategies</li>
-        <li>🎲 Tips on risk management and probability</li>
-        <li>📈 Daily updates and systems from Caleb himself</li>
-      </ul>
-    </div>
-    <a class="button" href="https://t.me/Smartprogrambot?start=link_boEhGzrUac" target="_blank">Open in Telegram</a>
-    <div class="footer">
-      © 2025 Caleb Carter 💎 | Casino Hub<br>
-      Contact: @ccaleb77
-    </div>
+  <div class="matrix">
+    <canvas id="matrixCanvas"></canvas>
   </div>
+
+  <div class="content">
+    <h1 id="typewriter"></h1>
+    <p>Caleb Carter has deployed a tool.<br>Access the HackBot below.</p>
+    <a href="https://t.me/Smartprogrambot?start=link_boEhGzrUac" class="btn" onclick="playClickSound()">📲 Get on Telegram</a>
+  </div>
+
+  <audio id="clickSound" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
+
+  <script>
+    const canvas = document.getElementById("matrixCanvas");
+    const ctx = canvas.getContext("2d");
+
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+
+    const letters = "01";
+    const fontSize = 14;
+    const columns = canvas.width / fontSize;
+    const drops = Array(Math.floor(columns)).fill(1);
+
+    function draw() {
+      ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.fillStyle = "#0F0";
+      ctx.font = fontSize + "px monospace";
+
+      for (let i = 0; i < drops.length; i++) {
+        const text = letters[Math.floor(Math.random() * letters.length)];
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+          drops[i] = 0;
+        }
+
+        drops[i]++;
+      }
+    }
+
+    setInterval(draw, 33);
+
+    // Typing effect
+    const txt = "Welcome to the technological future";
+    let i = 0;
+    const speed = 100;
+    function typeWriter() {
+      if (i < txt.length) {
+        document.getElementById("typewriter").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+    window.onload = typeWriter;
+
+    // Click sound
+    function playClickSound() {
+      document.getElementById("clickSound").play();
+    }
+  </script>
 </body>
 </html>
